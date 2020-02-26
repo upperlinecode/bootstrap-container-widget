@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Container Widget</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="bg-info">
+        <nav class="navbar bg-danger text-light">
+            <a class="navbar-brand">Container Widget</a>
+        </nav>
+        <div id="container">
+            <h1 class="text-white" align="center">Here is an entire paragraph of text which definitely does not deserve to be read. It exists merely to demonstrate the affect of adding a container to a page with Bootstrap. You can use the button at the bottom of this page to toggle the container. As you can see, the container increases the margins, constraining the page's content to the center of the screen.</h1>
+            <div class="d-flex justify-content-center">
+                <button id="toggle" class="btn btn-danger" onclick="toggle()">Turn container on</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function toggle() {
+            var container = document.getElementById("container");
+            var button = document.getElementById("toggle");
+            if(container.classList.contains("container")) {
+                container.classList.remove("container");
+                button.innerHTML = "Turn container on";
+            } else {
+                container.classList.add("container");
+                button.innerHTML = "Turn container off";
+            }
+        }
+    </script>
+</html>
